@@ -2,7 +2,6 @@ import gymnasium as gym
 import torch as th
 import torch.nn as nn
 import numpy as np
-
 import glob
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import VecEnv, VecMonitor, VecEnvWrapper
@@ -179,7 +178,6 @@ class PLRVecEnv(VecEnv):
         self.plr      = plr_buffer
         self._actions = None
 
-        # rand_seed passed through so levels are identical to your baseline
         self._g3 = ProcgenGym3Env(
             num=num_envs, env_name=env_name,
             start_level=0, num_levels=num_levels,
