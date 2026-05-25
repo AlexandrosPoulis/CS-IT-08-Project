@@ -5,9 +5,7 @@ The Algorithms investigated are RainbowDQN, PPO, PLR, ASHA and PB2.
 >For the Rainbow DQN code it is importand to note that python3.13 will be nessesary due to it needing to use procgen_gym, the gymnasium version of procgen (specificaly version 0.1.1 of procgen-gym) a version that needs python3.13 and the AgileRL version was 2.6.1. For our
 >implementation used AgileRL's Rainbow DQN, here is their [GitHub](https://github.com/AgileRL/AgileRL) and [documentation](https://docs.agilerl.com/en/latest/).
 
->For our PPO implementation we used SB3 the python version needed is . . .
-
->For PLR . . .
+>For our For PLR & PPO implementation we used SB3 the python version needed is . . .
 
 >For ASHA & PB2 . . .
 
