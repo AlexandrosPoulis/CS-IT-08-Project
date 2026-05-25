@@ -14,8 +14,8 @@ import procgen_gym  # gymnasium procgen version(procgen is in gym causing proble
 from typing import Callable
 import torch
 import numpy as np
-from impala_cnn import ImpalaCNN
-#torch.set_num_threads(8)
+from impala_cnn_for_rainbow import ImpalaCNN
+
 
 from agilerl.algorithms.dqn_rainbow import RainbowDQN
 from agilerl.training.train_off_policy import train_off_policy
