@@ -1,0 +1,52 @@
+{
+    "hyperparameters": {
+        "env_name": "coinrun",
+        "num_envs": 128,
+        "distribution_mode": "hard",
+        "start_level": 0,
+        "num_levels": 500,
+        "rand_seed": 749251,
+        "frame_stack": 4,
+        "context_options": "[\n  {\"visibility\": 9,  \"allow_monsters\": true},\n  {\"visibility\": 11, \"allow_monsters\": true},\n  {\"visibility\": 13, \"allow_monsters\": true},\n  {\"visibility\": 15, \"allow_monsters\": true},\n  {\"visibility\": 17, \"allow_monsters\": true}\n]",
+        "policy_type": "CnnPolicy",
+        "total_timesteps": 50000000,
+        "learning_rate": 0.0005,
+        "n_steps": 128,
+        "batch_size": 8192,
+        "n_epochs": 3,
+        "gamma": 0.99,
+        "gae_lambda": 0.95,
+        "ent_coef": 0.01,
+        "clip_range": 0.2,
+        "vf_coef": 0.5,
+        "device": "cuda",
+        "run_tag": "coinrun_8196_4_mixedvis_seed749251",
+        "save_dir": "/work",
+        "resume": false
+    },
+    "context_options": [
+        {
+            "visibility": 9,
+            "allow_monsters": true
+        },
+        {
+            "visibility": 11,
+            "allow_monsters": true
+        },
+        {
+            "visibility": 13,
+            "allow_monsters": true
+        },
+        {
+            "visibility": 15,
+            "allow_monsters": true
+        },
+        {
+            "visibility": 17,
+            "allow_monsters": true
+        }
+    ],
+    "run_name": "CnnPolicy_50M_coinrun_8192_4_levels500_seed749251_v0",
+    "model_path": "/work/tensorboard_logs/cprocgen/models/CnnPolicy_50M_coinrun_8192_4_levels500_seed749251_v0/CnnPolicy_50M_coinrun_8192_4_levels500_seed749251_v0.zip",
+    "tensorboard_dir": "/work/tensorboard_logs/cprocgen/models/CnnPolicy_50M_coinrun_8192_4_levels500_seed749251_v0"
+}

@@ -1,0 +1,12 @@
+num_timesteps: 50003968
+rating: 0.6530
+total_wins: 677679
+total_deaths: 360138
+total_episodes: 1037817
+
+Death type breakdown:
+  saw: 238330 (66.18%)
+  enemy: 102147 (28.36%)
+  lava: 19640 (5.45%)
+  timeout: 21 (0.01%)
+  unknown: 0 (0.00%)
