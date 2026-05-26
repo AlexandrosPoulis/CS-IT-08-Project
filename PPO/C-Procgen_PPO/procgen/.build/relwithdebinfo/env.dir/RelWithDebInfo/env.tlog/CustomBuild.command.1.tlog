@@ -1,0 +1,10 @@
+^C:\USERS\HERMA\ONEDRIVE\DESKTOP\AAU\CSIT8\CPROCGEN-CPROCGEN-RELEASE\CPROCGEN-CPROCGEN-RELEASE\PROCGEN\CMAKELISTS.TXT
+setlocal
+C:\Users\herma\OneDrive\Desktop\AAU\CSIT8\CProcgen-cprocgen-release\CProcgen-cprocgen-release\.venv\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/herma/OneDrive/Desktop/AAU/CSIT8/CProcgen-cprocgen-release/CProcgen-cprocgen-release/procgen -BC:/Users/herma/OneDrive/Desktop/AAU/CSIT8/CProcgen-cprocgen-release/CProcgen-cprocgen-release/procgen/.build/relwithdebinfo --check-stamp-file C:/Users/herma/OneDrive/Desktop/AAU/CSIT8/CProcgen-cprocgen-release/CProcgen-cprocgen-release/procgen/.build/relwithdebinfo/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
