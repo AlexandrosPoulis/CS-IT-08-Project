@@ -7,14 +7,13 @@ from argparse import Action
 
 import gymnasium as gym
 from gymnasium.vector import SyncVectorEnv
-import procgen_gym  # gymnasium procgen version(procgen is in gym causing problems with AgileRL)
+import procgen_gym 
 
 
 from typing import Callable
 import torch
 import numpy as np
 from impala_cnn_for_rainbow import ImpalaCNN
-#torch.set_num_threads(8)
 
 from agilerl.algorithms.dqn_rainbow import RainbowDQN
 from agilerl.training.train_off_policy import train_off_policy
