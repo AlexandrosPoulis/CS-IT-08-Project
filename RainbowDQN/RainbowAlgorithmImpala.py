@@ -1,26 +1,23 @@
-# .\rl-project-gymnasium\Scripts\activate
-
-# The python version needed is 3.13 for the procgen_gym
+# The version of python needed to use is python 3.13+.
+# The specific versions of procgen-gymnasium (procgen_gym) is  0.1.1 and for AgileRL is 2.6.1.
 
 import gymnasium as gym
-#from gymnasium import spaces
+
 from gymnasium.vector import SyncVectorEnv
-import procgen_gym  # gymnasium procgen version(procgen is in gym causing problems with AgileRL)
-#from typing import Callable
+import procgen_gym 
 import torch
 import torch.nn as nn
 import numpy as np
 import os
 from torch.utils.tensorboard import SummaryWriter
-#os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 from agilerl.algorithms.dqn_rainbow import RainbowDQN
 from agilerl.training.train_off_policy import train_off_policy
 from agilerl.components.replay_buffer import (
     MultiStepReplayBuffer,
     PrioritizedReplayBuffer,
 )
-from agilerl.wrappers.make_evolvable import MakeEvolvable
-# This would be used if the infinite error problem was not encountered.
+from agilerl.wrappers.make_evolvable import MakeEvolvable # This would be used if the infinite error problem was not encountered.
+
 from impala_cnn_for_rainbow import ImpalaCNN
 from agilerl.networks.q_networks import RainbowQNetwork
 from gymnasium.vector import AsyncVectorEnv
@@ -102,7 +99,6 @@ def make_env(env_id=0):
                     num_levels=50,
                     start_level=0,
                     distribution_mode="easy",
-                    #render_mode="rgb_array",#
                     rand_seed = env_start_id)
     env = ProcgenPreprocess(env)
     env = SingleEnvTensorboardLogger(env, env_id)
@@ -163,6 +159,7 @@ def train_agent(resume_from_checkpoint=None):
     os.makedirs(f"{base_dir}/checkpoints", exist_ok=True)
     
     # wandb sync --local ./experiments/Rainbow_Batch128_EasyMode_Test1/wandb/latest-run
+    # to sync the local wb logger to the online one
     wb_settings = {
         "project": "Procgen_CoinRun",
         "addl_args": {

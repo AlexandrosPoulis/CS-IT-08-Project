@@ -1,6 +1,5 @@
-#.\rl-project\Scripts\activate
-# .\rl-project-gymnasium\Scripts\activate
-#to use procgen-gymnasium but it seems it only works on amd architecture for windows not itnel
+# The version of python needed to use is python 3.13+.
+# The specific versions of procgen-gymnasium (procgen_gym) is  0.1.1 and for AgileRL is 2.6.1.
 
 from argparse import Action
 
@@ -8,14 +7,13 @@ from argparse import Action
 
 import gymnasium as gym
 from gymnasium.vector import SyncVectorEnv
-import procgen_gym  # gymnasium procgen version(procgen is in gym causing problems with AgileRL)
+import procgen_gym 
 
 
 from typing import Callable
 import torch
 import numpy as np
 from impala_cnn_for_rainbow import ImpalaCNN
-#torch.set_num_threads(8)
 
 from agilerl.algorithms.dqn_rainbow import RainbowDQN
 from agilerl.training.train_off_policy import train_off_policy
