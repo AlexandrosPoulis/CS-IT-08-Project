@@ -1,6 +1,5 @@
-#.\rl-project\Scripts\activate
-# .\rl-project-gymnasium\Scripts\activate
-#to use procgen-gymnasium but it seems it only works on amd architecture for windows not itnel
+# The version of python needed to use is python 3.13+.
+# The specific versions of procgen-gymnasium (procgen_gym) is  0.1.1 and for AgileRL is 2.6.1.
 
 from argparse import Action
 
